@@ -44,5 +44,7 @@ http://localhost:9091/
 
 If building and running locally
 
+```
 docker build -t turnilo/test .
 docker run -d -e "DRUID_BROKER_URL=http://192.168.1.156:8082" -p 9091:9090 turnilo/test
+```
