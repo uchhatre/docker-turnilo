@@ -1,6 +1,9 @@
 #!/bin/bash
 cd
 
+echo "dumping all arguments"
+echo $@
+
 if [ -n "$CONFIG_FILE" ]; then
   # Priority 1 : If config file is found use it
   echo "About to execute:turnilo --config /etc/config/turnilo/config.yml"

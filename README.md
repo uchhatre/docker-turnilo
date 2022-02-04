@@ -15,7 +15,7 @@ docker run -d -e "DRUID_BROKER_URL=http://192.168.1.156:8082" -p 9091:9090 uchha
 2) If you want to export a config file that you hope to edit, here are 2 steps you need to do. The step below will export new-config.yml file in your /Users/myname/myconfigdir directory
 
 ```
-docker run -d -e "DRUID_BROKER_URL=http://192.168.1.156:8082" -e "DUMP_CONFIG=true" -v /Users/myname/myconfigdir:/etc/config/export 
+docker run -d -e "DRUID_BROKER_URL=http://192.168.1.156:8082" -e "DUMP_CONFIG=true" -v /Users/myname/myconfigdir:/etc/config/export uchhatre/turnilo:latest
 ```
 
 3) If you have a config file, or you just exported one in the step above that you want to run, load it as below. If you do not plan to edit the config file, exporting one is needless!
