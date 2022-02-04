@@ -6,7 +6,7 @@ Your goal here is either to connect it and dump config.yml that you can later ed
 
 Here are typical usage patterns --
 
-1) Supply your druid  URL. If your docker is running at : http://192.168.1.156:8082, here is a quick command to fire up Turnilo
+1) Supply your druid  URL. If your druid is running at : http://192.168.1.156:8082, here is a quick command to fire up Turnilo
 
 ```
 docker run -d -e "DRUID_BROKER_URL=http://192.168.1.156:8082" -p 9091:9090 uchhatre/turnilo:latest
@@ -42,8 +42,16 @@ Turnilo will be available at
 http://localhost:9091/
 
 
-If building and running locally
+If building and running locally (assuming you have docker already installed and running)
 
+Pull the git repo first
+
+```
+git clone https://github.com/uchhatre/docker-turnilo.git
+cd docker-turnilo
+```
+
+Now build the docker image, 
 ```
 docker build -t turnilo/test .
 docker run -d -e "DRUID_BROKER_URL=http://192.168.1.156:8082" -p 9091:9090 turnilo/test
