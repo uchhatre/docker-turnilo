@@ -55,4 +55,5 @@ Now build the docker image,
 ```
 docker build -t turnilo/test .
 docker run -d -e "DRUID_BROKER_URL=http://192.168.1.156:8082" -p 9091:9090 turnilo/test
+
 ```
